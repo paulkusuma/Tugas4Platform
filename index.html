@@ -21,6 +21,34 @@
         </div>
     </header>
 
+
+    <div id="section1">
+        <div id="InputNama">
+            <h3>Nama : <input type="text" id="dataInputNama" placeholder="masukan nama"></h3>
+        </div>
+        <div id="inputJumlah">
+            <h3>Jumlah Pilihan : <input type="text" id="dataInputJumlah" placeholder="jumlah"></h3>
+        </div>
+        <div>
+            <button onclick="tampil()"></button>
+        </div>
+    </div>
+    
+    <div id="section2">
+        <!-- Pilihan 1 : <input type="text"> -->
+    </div>
+
+    <script>
+        function tampil(jumlah){
+            jumlah = document.getElementById("dataInputJumlah").value;
+            var tag = "";
+            for (let index = 1; index <= parseInt(jumlah); index++) {
+                tag+='Pilihan '+ index +' : <input type="text"> <br>';
+            }
+            document.getElementById("section2").innerHTML = tag;
+
+        }
+    </script>
 </body>
 
 </html>
