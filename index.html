@@ -13,6 +13,9 @@
 
 <body>
     <header class="HeaderPaul">
+        <div id="foto">
+            <img src="Foto.jpg" height="100" width="80">
+        </div>
         <div>
             <h3>Paul Wijaya Verda Kusuma</h3>
         </div>
@@ -27,28 +30,24 @@
             <h3>Nama : <input type="text" id="dataInputNama" placeholder="masukan nama"></h3>
         </div>
         <div id="inputJumlah">
-            <h3>Jumlah Pilihan : <input type="text" id="dataInputJumlah" placeholder="jumlah"></h3>
+            <h3>Jumlah Pilihan : <input type="number" id="dataInputJumlah" placeholder="jumlah"></h3>
         </div>
         <div>
-            <button onclick="tampil()"></button>
+            <button onclick="tampilMasukanJumlahPilihan()">OK</button>
         </div>
     </div>
-    
+
     <div id="section2">
-        <!-- Pilihan 1 : <input type="text"> -->
+        <div id="isi"> </div>
+        <button id="tombolOKPilihan" onclick="tampilPilihanSalahSatu()" style="display: none;">OK</button>
     </div>
 
-    <script>
-        function tampil(jumlah){
-            jumlah = document.getElementById("dataInputJumlah").value;
-            var tag = "";
-            for (let index = 1; index <= parseInt(jumlah); index++) {
-                tag+='Pilihan '+ index +' : <input type="text"> <br>';
-            }
-            document.getElementById("section2").innerHTML = tag;
+    <div id="section3">
+        <div id="isiT"></div>
+        <button id="tombolOK" onclick="pilihanDropBox()" style="display: none;">OK</button>
+    </div>
 
-        }
-    </script>
+    <script src="javaScript.js"></script>
 </body>
 
 </html>
